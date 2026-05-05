@@ -5,6 +5,8 @@
 \usepackage{hyperref}%For Hyperlinks
 \usepackage{textcomp}%For text styles like color and font
 \usepackage[margin=1.3in]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath}
 
 \begin{document}
 	
@@ -26,6 +28,53 @@
 		
 	\end{itemize}
 	
+	\section{Issues}
+
+%\begin{tabular}{||c c c||}
+%	\underline{Transmission} & \underline{Metasurface} & \underline{Recption}
+%	\\ & Transmission Power
+%\end{tabular}	
+\begin{equation} 
+	P_{rx}=P_{tx}+G_{tx}-L_{tx}-L{fs}-L{prop}+G_{rx}-L_{rx}
+	\label{eq:Link Budget Equation} 
+\end{equation}
+
+	\begin{multicols}{3}
+		\underline{Transmission}
+		\begin{itemize}
+			\item Transmission Power ($<$1W Max FCC 97.215)
+			\item Circuit Power
+			\item Data transmission
+			\item Frequency (Legal Practical)
+		\end{itemize}
+		\columnbreak
+	%	\vfill
+	
+		\underline{MetaSurface}
+		\begin{itemize}
+			\item Beamwidth 
+			\begin{itemize}
+				\item radial beamsteerer?	
+			\end{itemize} 
+			\item Beam Pattern on ground
+			\item Power Loss
+			\item Size
+			
+		\end{itemize}
+		\columnbreak
+	%	\vfill
+	
+		\underline{Reception}
+		\begin{itemize}
+			\item Data decoding
+			\begin{itemize}
+				\item Morse code
+				\item ASCII
+			\end{itemize}
+		\end{itemize}
+		\columnbreak
+	%	\vfill
+	\end{multicols}	
 	\section{Resources}
 	\begin{itemize}
 		\item https://wiki.analog.com/resources/eval/user-guides/circuits-from-the-lab/cn0566 (Analog Devices Phased Array Antenna)
